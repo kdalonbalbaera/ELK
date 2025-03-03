@@ -1,0 +1,132 @@
+https://www.elastic.co/guide/en/elasticsearch/reference/8.17/rpm.html
+https://www.elastic.co/guide/en/elastic-stack/8.17/installing-stack-demo-self.html#install-stack-self-prereqs
+
+#SUPER USER PASSWORD
+pqtmebf0luVwol96oSPs
+
+export ELASTIC_PASSWORD="pqtmebf0luVwol96oSPs"
+
+sudo curl --cacert /etc/elasticsearch/certs/http_ca.crt -u elastic:pqtmebf0luVwol96oSPs https://localhost:9200
+
+
+dnf install wget -y
+sudo yum install perl-Digest-SHA
+
+sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
+
+sudo curl --cacert /etc/elasticsearch/certs/http_ca.crt -u elastic:jSj4ILlkYamk_8Yh9Jee= https://localhost:9200
+
+sudo curl --cacert /etc/elasticsearch/certs/http_ca.crt -u elastic:jSj4ILlkYamk_8Yh9Jee_  https://localhost:9200
+
+eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMjA4LjguOC4xMzk6OTIwMCJdLCJmZ3IiOiI2NDk3NzkzNGQyNzEzNTBiZDA2MTA0OGQ3ZDc5NTBhNWFlNjA4ZDYxZWQwYWYzZjM3OTc1OGE4NzY4YTQwNjZhIiwia2V5IjoiN2hUSlI1VUItZjBRbE5wRTZLeXk6dFpGX1ZjRXdRdnlUa3M0SGtYRzFXQSJ9
+
+
+curl -L -O https://artifacts.elastic.co/downloads/beats/elastic-agent/elastic-agent-8.17.2-linux-x86_64.tar.gz
+tar xzvf elastic-agent-8.17.2-linux-x86_64.tar.gz
+cd elastic-agent-8.17.2-linux-x86_64
+sudo ./elastic-agent install \
+  --fleet-server-es=https://208.8.8.139:9200 \
+  --fleet-server-service-token=AAEAAWVsYXN0aWMvZmxlZXQtc2VydmVyL3Rva2VuLTE3NDA2NjY4MzAwNzg6cWxBWFFuOVRSeDZoT28tNzVhd2tsdw \
+  --fleet-server-policy=fleet-server-policy \
+  --fleet-server-es-ca-trusted-fingerprint=64977934d271350bd061048d7d7950a5ae608d61ed0af3f379758a8768a4066a \
+  --fleet-server-port=8220
+  
+  
+  FOR FILEBEAT
+  openssl x509 -fingerprint -sha256 -noout -in /etc/elasticsearch/certs/http_ca.crt
+
+  
+  64:97:79:34:D2:71:35:0B:D0:61:04:8D:7D:79:50:A5:AE:60:8D:61:ED:0A:F3:F3:79:75:8A:87:68:A4:06:6A
+  
+  
+  
+  configure terminal
+logging host 208.8.8.139  
+logging trap informational  
+logging source-interface Vlan1  
+logging on 
+exit
+
+
+DqBDSJUBYKoycvqIl7qz:BZgwUM_DRAGUFmIlej1V6w
+
+curl -L -O https://artifacts.elastic.co/downloads/downloads/beats/elastic-agent/elastic-agent-8.17.2-linux-x86_64.tar.gz 
+tar xzvf elastic-agent-8.17.2-linux-x86_64.tar.gz
+cd elastic-agent-8.17.2-linux-x86_64
+sudo ./elastic-agent install
+
+
+
+
+Authentication and authorization are enabled.
+TLS for the transport and HTTP layers is enabled and configured.
+
+The generated password for the elastic built-in superuser is : jdrsQffOUDm-OcE3llfu
+
+If this node should join an existing cluster, you can reconfigure this with
+'/usr/share/elasticsearch/bin/elasticsearch-reconfigure-node --enrollment-token <token-here>'
+after creating an enrollment token on your existing cluster.
+
+You can complete the following actions at any time:
+
+Reset the password of the elastic built-in superuser with 
+'/usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic'.
+
+Generate an enrollment token for Kibana instances with 
+ '/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana'.
+
+Generate an enrollment token for Elasticsearch nodes with 
+'/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s node'.
+
+-------------------------------------------------------------------------------------------------
+### NOT starting on installation, please execute the following statements to configure elasticsearch service to start automatically using systemd
+ sudo systemctl daemon-reload
+ sudo systemctl enable elasticsearch.service
+### You can start elasticsearch service by executing
+ sudo systemctl start elasticsearch.service
+
+/usr/lib/tmpfiles.d/elasticsearch.conf:1: Line references path below legacy directory /var/run/, updating /var/run/elasticsearch → /run/elasticsearch; please update the tmpfiles.d/ drop-in file accordingly.
+
+  Verifying        : elasticsearch-8.17.2-1.x86_64                                                                                                                 1/1 
+
+Installed:
+  elasticsearch-8.17.2-1.x86_64 
+
+export ELASTIC_PASSWORD="Olap2PJd8P-LgSWkbhG_"
+
+curl -u elastic:Olap2PJd8P-LgSWkbhG_ http://208.8.8.139:9200
+
+#FIREWALL
+sudo firewall-cmd --add-port=5601/tcp --permanent
+sudo firewall-cmd --add-port=9200/tcp --permanent
+sudo firewall-cmd --reload
+sudo firewall-cmd --list-all
+sudo ss -tulwn | grep 5601
+
+#Generate PASSWORD
+sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
+
+
+
+curl -u elastic:Olap2PJd8P-LgSWkbhG_ -X GET http://208.8.8.139:9200
+sudo nano /etc/elasticsearch/elasticsearch.yml  
+#CREATE TOKEN: 
+curl -u elastic:curl -u elastic:pqtmebf0luVwol96oSPs -X GET http://208.8.8.138:9200 -X POST "http://208.8.8.138:9200/_security/service/elastic/kibana/credential/token/my-token" -H "Content-Type: application/json"
+
+AAEAAWVsYXN0aWMva2liYW5hL215LXRva2VuOkdPNmRfRmRvU2dDWWs1MUR6QUpIdkE
+
+#KIBANA
+sudo nano /etc/kibana/kibana.yml
+sudo systemctl start kibana
+sudo systemctl restart kibana
+sudo systemctl status kibana
+
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable kibana.service
+sudo systemctl start kibana.service
+sudo systemctl stop kibana.service
+
+
+
+eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMjA4LjguOC4xMzg6OTIwMCJdLCJmZ3IiOiIxMDg2YTVhYzQ1OTljZDFiNWYwMTdjMzM3ZjhkMjdkNDgxZjMzYjJkMGNhNzVlMjE0N2Y2NDE2YWViYmUzNDNlIiwia2V5IjoiTjNpalhKVUJDNkJ2OFZ5ZEFOUUc6WEhtNGF4blBSSzZITzBsdTNkeFlFQSJ9
+                                                                                                                                     

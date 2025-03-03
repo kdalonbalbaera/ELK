@@ -1,0 +1,25 @@
+1. Open VMWare. _CCNP-APPS --> Csr1000v --> csr1000v-universalk9.16.09.05.ova
+
+Router Name: virtualcisco
+Login Username: admin
+Password: pass
+
+Open VM Settings: 
+Network: NAT
+
+
+
+2. Power on the Virtual Machine
+
+enable
+conf t
+int gi 1
+ip add 208.8.8.150 255.255.255.0
+no shu
+do write
+
+
+https://www.elastic.co/guide/en/elastic-stack/8.17/installing-stack-demo-self.html#install-stack-self-elasticsearch-first
+
+1. Fleet
+2. Agent
