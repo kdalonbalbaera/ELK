@@ -2,11 +2,11 @@ https://www.elastic.co/guide/en/elasticsearch/reference/8.17/rpm.html
 https://www.elastic.co/guide/en/elastic-stack/8.17/installing-stack-demo-self.html#install-stack-self-prereqs
 
 #SUPER USER PASSWORD
-pqtmebf0luVwol96oSPs
+Ww69eqeS7umght-s7PPe
 
-export ELASTIC_PASSWORD="pqtmebf0luVwol96oSPs"
+export ELASTIC_PASSWORD="Ww69eqeS7umght-s7PPe"
 
-sudo curl --cacert /etc/elasticsearch/certs/http_ca.crt -u elastic:pqtmebf0luVwol96oSPs https://localhost:9200
+sudo curl --cacert /etc/elasticsearch/certs/http_ca.crt -u elastic:Ww69eqeS7umght-s7PPe https://localhost:9200
 
 
 dnf install wget -y
@@ -127,6 +127,4 @@ sudo systemctl start kibana.service
 sudo systemctl stop kibana.service
 
 
-
-eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMjA4LjguOC4xMzg6OTIwMCJdLCJmZ3IiOiIxMDg2YTVhYzQ1OTljZDFiNWYwMTdjMzM3ZjhkMjdkNDgxZjMzYjJkMGNhNzVlMjE0N2Y2NDE2YWViYmUzNDNlIiwia2V5IjoiTjNpalhKVUJDNkJ2OFZ5ZEFOUUc6WEhtNGF4blBSSzZITzBsdTNkeFlFQSJ9
-                                                                                                                                     
+eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMjA4LjguOC4xNDE6OTIwMCJdLCJmZ3IiOiI2Yjk3YzI4ZGI3OTA5OTIzNjQxOTk3NjdhM2I3YjRkZDMzMTUzNDBlYzVhYTc4MzllNTYzNWRhODY1OWM4MTgzIiwia2V5IjoiY1kzZFhKVUJzQ0R6TmR2QllfdHU6bjY5eDA2NTFRVTZRNlhjZk51UzhidyJ9
