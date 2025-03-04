@@ -23,3 +23,6 @@ https://www.elastic.co/guide/en/elastic-stack/8.17/installing-stack-demo-self.ht
 
 1. Fleet
 2. Agent
+
+
+https://coda.io/d/_dgTDwJJGPfq/ElasticSearch-Kibana-FileBeat-Monitor-Cisco_suiI8ja4
